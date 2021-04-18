@@ -1,0 +1,22 @@
+{
+    "routes": [
+        {
+            "route": "/login",
+            "rewrite": "/.auth/login/aad"
+        },
+        {
+            "route": "/*",
+            "allowedRoles": ["authenticated"]
+        }
+    ],
+    "responseErrorOverrides": {
+        "404": {
+            "rewrite": "/custom_404.html",
+            "statusCode": 200
+        },
+        "401": {
+            "redirect": "/login",
+            "statusCode": 302
+        }
+    }
+}
