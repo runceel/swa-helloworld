@@ -12,7 +12,7 @@
     <p id='output'></p>
     <script>
         async function invokeApi() {
-            const response = await fetch('/api/HttpTrigger?name=okazuki');
+            const response = await fetch('/api/HttpTrigger');
             document.getElementById('output').innerText = await response.text();
         }
 
