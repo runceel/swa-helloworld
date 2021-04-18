@@ -9,7 +9,7 @@
             "allowedRoles": ["authenticated"]
         }
     ],
-    "responseErrorOverrides": {
+    "responseOverrides": {
         "404": {
             "rewrite": "/custom_404.html",
             "statusCode": 200
